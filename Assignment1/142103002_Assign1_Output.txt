@@ -1,0 +1,5 @@
+The_AT quick_JJ brown_IN fox_AT jumps_NN over_IN the_AT lazy_JJ dog_NN
+She_PPS sells_VBZ seashells_NN by_IN the_AT seashore_JJ
+It_PPS was_BEDZ a_AT dark_JJ and_CC stormy_AT night_NN
+The_AT cat_NN in_IN the_AT hat_NN
+To_TO be_BE or_CC not_* to_TO be_BE ,_, that_WPS is_BEZ the_AT question_NN
