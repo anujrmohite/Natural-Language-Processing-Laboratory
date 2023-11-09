@@ -1,2 +1,0 @@
-output :PPS_VBD_CS_AT_NNS_``_VB_NN_TO_VB_''_DT_NN_._
-original :PPS_VBD_CS_AT_NN_``_VB_NNS_TO_VB_''_DT_NN_._
