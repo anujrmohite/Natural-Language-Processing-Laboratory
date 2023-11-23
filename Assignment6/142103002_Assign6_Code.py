@@ -8,10 +8,10 @@ nltk.download("wordnet")
 
 
 def disambiguate_word(context, ambiguous_word):
-    # Tokenize the context into a list of words
+    # Tokenizing the context into a list of words
     context_tokens = word_tokenize(context)
 
-    # Use the Lesk algorithm to disambiguate the meaning of the ambiguous word
+    # Lesk algorithm to disambiguate the meaning of the ambiguous word
     sense = lesk(context_tokens, ambiguous_word)
 
     # Check if a sense was determined
@@ -26,12 +26,19 @@ def disambiguate_word(context, ambiguous_word):
         )
 
 
-# Example usage
+# Example context and ambiguous word
 context = "I went to the bank to deposit some money."
 ambiguous_word = "bank"
 
 # Apply the disambiguation function to the provided context and ambiguous word
 result = disambiguate_word(context, ambiguous_word)
 
-# Print the result
-print(result)
+# Specify the output file
+output_file = "output.txt"
+
+# Write the result to the output file
+with open(output_file, "w") as file:
+    print(result, file=file)
+
+# Print a message indicating where the output is saved
+print(f"Result saved to {output_file}")

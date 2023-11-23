@@ -5,6 +5,7 @@ import random
 import sys
 
 
+# Enum to represent different transition types
 class Transition(Enum):
     SHIFT = 1
     LEFT_ARC = 2
@@ -12,6 +13,7 @@ class Transition(Enum):
     REDUCE = 4
 
 
+# Class representing the state of the parser
 class ParserState:
     def __init__(self, sentence):
         # Initialize the stack with a tuple for ROOT
@@ -20,6 +22,7 @@ class ParserState:
         self.dependencies = []
 
     def shift(self):
+        # Move a word from the buffer to the stack
         self.stack.append(self.buffer.pop(0))
 
     def left_arc(self):
@@ -37,21 +40,27 @@ class ParserState:
         self.stack.pop()
 
     def reduce(self):
+        # Pop the topmost item from the stack
         self.stack.pop()
 
     def is_final_state(self):
+        # Check if the parser has reached the final state
         return len(self.stack) == 1 and not self.buffer
 
 
+# Class representing a transition-based dependency parser
 class TransitionBasedDependencyParser:
     def __init__(self):
         pass
 
     def parse(self, sentence):
+        # Initialize the parser state
         state = ParserState(sentence)
         transitions = []
 
+        # Perform transitions until the final state is reached
         while not state.is_final_state():
+            # Choose the next transition based on the state of the parser
             if len(state.stack) > 1 and not state.buffer:
                 transition = Transition.REDUCE
             elif len(state.stack) > 1 and random.choice([True, False]):
@@ -59,8 +68,10 @@ class TransitionBasedDependencyParser:
             else:
                 transition = Transition.SHIFT
 
+            # Record the chosen transition
             transitions.append(transition.name)
 
+            # Perform the chosen transition
             if transition == Transition.SHIFT:
                 state.shift()
             elif transition == Transition.LEFT_ARC:
@@ -70,6 +81,7 @@ class TransitionBasedDependencyParser:
             elif transition == Transition.REDUCE:
                 state.reduce()
 
+        # Return the resulting dependencies and the sequence of transitions
         return state.dependencies, transitions
 
 
@@ -81,6 +93,7 @@ parser = TransitionBasedDependencyParser()
 sentence = "The quick brown fox jumps over the lazy dog."
 dependencies, transitions = parser.parse(sentence)
 
+# Print the resulting dependencies and transitions
 print("Dependencies:")
 for dep in dependencies:
     print(dep)
