@@ -4,7 +4,6 @@ from enum import Enum
 import random
 import sys
 
-
 # Enum to represent different transition types
 class Transition(Enum):
     SHIFT = 1
@@ -12,8 +11,6 @@ class Transition(Enum):
     RIGHT_ARC = 3
     REDUCE = 4
 
-
-# Class representing the state of the parser
 class ParserState:
     def __init__(self, sentence):
         # Initialize the stack with a tuple for ROOT
@@ -47,8 +44,6 @@ class ParserState:
         # Check if the parser has reached the final state
         return len(self.stack) == 1 and not self.buffer
 
-
-# Class representing a transition-based dependency parser
 class TransitionBasedDependencyParser:
     def __init__(self):
         pass
@@ -71,7 +66,6 @@ class TransitionBasedDependencyParser:
             # Record the chosen transition
             transitions.append(transition.name)
 
-            # Perform the chosen transition
             if transition == Transition.SHIFT:
                 state.shift()
             elif transition == Transition.LEFT_ARC:
@@ -84,16 +78,13 @@ class TransitionBasedDependencyParser:
         # Return the resulting dependencies and the sequence of transitions
         return state.dependencies, transitions
 
-
 # Redirect stdout to the output file
 sys.stdout = open("142103002-No_Assign5_Output.txt", "w")
 
-# Example usage:
 parser = TransitionBasedDependencyParser()
 sentence = "The quick brown fox jumps over the lazy dog."
 dependencies, transitions = parser.parse(sentence)
 
-# Print the resulting dependencies and transitions
 print("Dependencies:")
 for dep in dependencies:
     print(dep)
@@ -102,5 +93,4 @@ print("\nTransitions:")
 for trans in transitions:
     print(trans)
 
-# Close the file
 sys.stdout.close()

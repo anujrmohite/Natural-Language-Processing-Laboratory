@@ -1,0 +1,26 @@
+Dependencies:
+(0, 'left', 'The')
+('brown', 'left', 'fox')
+('fox', 'left', 'jumps')
+
+Transitions:
+SHIFT
+LEFT_ARC
+SHIFT
+SHIFT
+SHIFT
+LEFT_ARC
+SHIFT
+LEFT_ARC
+SHIFT
+SHIFT
+SHIFT
+SHIFT
+SHIFT
+REDUCE
+REDUCE
+REDUCE
+REDUCE
+REDUCE
+REDUCE
+REDUCE
