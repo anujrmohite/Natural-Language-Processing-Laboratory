@@ -1,0 +1,26 @@
+Dependencies:
+('brown', 'right', 'quick')
+('fox', 'left', 'jumps')
+('lazy', 'right', 'the')
+
+Transitions:
+SHIFT
+SHIFT
+SHIFT
+RIGHT_ARC
+SHIFT
+SHIFT
+LEFT_ARC
+SHIFT
+SHIFT
+SHIFT
+RIGHT_ARC
+SHIFT
+SHIFT
+REDUCE
+REDUCE
+REDUCE
+REDUCE
+REDUCE
+REDUCE
+REDUCE
