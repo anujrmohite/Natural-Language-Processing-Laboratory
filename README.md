@@ -9,17 +9,9 @@ Study and apply word embeddings to real-life problems.
 
 List of Assignments:
 
-## few changes are there in the assignments
-
-Please describe as tasks to be performed. More details required.
-
-1. Social Media Data Tokenization & Normalization.
-2. Designing spell checking program.
-3. Language Modeling.
-4. Viterbi Decoding Algorithm for Parts of Speech tagging.
-5. LSTM for Parts of Speech tagging.
-6. Design and implement a co-reference resolution model.
-7. Building a dependency parser for given input sentence.
-8. Word sense disambiguation using WordNet.
-9. Studying word embeddings for English/Hindi/Marathi language.
-10. Build an application using word embedding to solve real-time problem.
+Assignment 1 : Sequence Labeling task using Viterbi Algorithm
+Assignment 2: Language Modeling (Auto Completion)
+Assignment 3: Conditional Random fields for sequence labeling task
+Assignment 4: Implementing CYK Parsing technique
+Assignment 5: Transition Based dependency Parsing
+Assignment 6: WSD
