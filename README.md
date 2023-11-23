@@ -1,4 +1,4 @@
-# NLP-ASsignments
+# NLP-Assignments
 
 (CT-DE-) Natural Language Processing Laboratory
 Demonstrate the understanding of basic text processing techniques in NLP.
